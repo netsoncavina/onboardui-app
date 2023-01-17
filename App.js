@@ -4,6 +4,9 @@ import { Home } from "./components/Home";
 
 export const App = () => {
   const [showOnBoard, setShowOnBoard] = useState(true);
+  const handleOnBoard = () => {
+    setShowOnBoard(false);
+  };
   return <>{showOnBoard ? <Onboard /> : <Home />}</>;
 };
 
