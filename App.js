@@ -1,10 +1,16 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import { useFonts } from "expo-font";
 
 export default function App() {
+  const [fontsLoaded] = useFonts({
+    OpenSans: require("./assets/fonts/OpenSans-Regular.ttf"),
+    OpenSansBold: require("./assets/fonts/OpenSans-Bold.ttf"),
+    OpenSansSemiBold: require("./assets/fonts/OpenSans-SemiBold.ttf"),
+  });
   return (
     <View style={styles.container}>
-      <Text>Funcionando</Text>
+      <Text style={styles.text}>Funcionandooooo</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,5 +22,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    fontFamily: "OpenSans",
   },
 });
